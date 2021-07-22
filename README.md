@@ -1,13 +1,16 @@
 # EPC-GiroCode
 
 generate image file holding a QR-Code formated as EPC-/GiroCode for scanning with banking apps
-  -->  see: https://de.wikipedia.org/wiki/EPC-QR-Code
+
+  -->  see: [wikipedia](https://de.wikipedia.org/wiki/EPC-QR-Code)
 
 **Version: 1.2 - 20210720 by d13n**
 
-###Changelog:
+### Changelog:
     V 1.0 first functional version
+    
     V 1.1 added uml2ascii function to convert german umlauts
+    
     V 1.2 shorten epc code strings to max allowed length and use absolute number for ammount
 
 ###usage:
