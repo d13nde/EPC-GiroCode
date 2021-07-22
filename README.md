@@ -1,19 +1,24 @@
 # EPC-GiroCode
 
-generate image file holding a QR-Code formated as EPC-/GiroCode for scanning with banking apps
-
-  -->  see: [wikipedia](https://de.wikipedia.org/wiki/EPC-QR-Code)
+Generate a PNG image-file holding a QR-Code formated as EPC-QR-Code
+for scanning with banking apps (aka GiroCode)
+For a detailed description of EPC-QR-Code see: [EPC-QR-Code on Wikipedia](https://de.wikipedia.org/wiki/EPC-QR-Code)
 
 **Version: 1.2 - 20210720 by d13n**
-
 ### Changelog
     V 1.0 first functional version
     V 1.1 added uml2ascii function to convert german umlauts
     V 1.2 shorten epc code strings to max allowed length and use absolute number for ammount
 
+### Sample QR-Code
+This command:
+`epc-giro-qrgen.py -b BFSWDE33BER -r 'Wikimedia Foerdergesellschaft' -i DE33100205000001194700 -a 123.45 -p 'Spende fuer Wikipedia' epcqr-test.png`
+generates this QR-Code:
+![Sample EPC-QR-Code]: epcqr-test.png "Sample EPC-QR-Code"
+
 ### Usage
 ```
-epc-giro-qrgen.py [-h] [-V] [-v] 
+epc-giro-qrgen.py [-h] [-V] [-v]
   -b BIC -r RECEIVER -i IBAN -a AMOUNT -p PURPOSE
   [--border BORDER] [--size SIZE] [--fg_color FG_COLOR] [--bg_color BG_COLOR]
   output_file
