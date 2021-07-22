@@ -1,17 +1,22 @@
 # EPC-GiroCode
-generate image file holding a QR-Code formated as EPC-/GiroCode for scanning with banking apps
- see: https://de.wikipedia.org/wiki/EPC-QR-Code
 
-Version: 1.2 - 20210720 by d13n
-Changelog:
+generate image file holding a QR-Code formated as EPC-/GiroCode for scanning with banking apps
+  -->  see: https://de.wikipedia.org/wiki/EPC-QR-Code
+
+**Version: 1.2 - 20210720 by d13n**
+
+###Changelog:
     V 1.0 first functional version
     V 1.1 added uml2ascii function to convert german umlauts
     V 1.2 shorten epc code strings to max allowed length and use absolute number for ammount
 
-usage: epc-giro-qrgen.py [-h] [-V] [-v] 
-        -b BIC -r RECEIVER -i IBAN -a AMOUNT -p PURPOSE
-        [--border BORDER] [--size SIZE] [--fg_color FG_COLOR] [--bg_color BG_COLOR]
-        output_file
+###usage:
+epc-giro-qrgen.py [-h] [-V] [-v] 
+  -b BIC -r RECEIVER -i IBAN -a AMOUNT -p PURPOSE
+  [--border BORDER] [--size SIZE] [--fg_color FG_COLOR] [--bg_color BG_COLOR]
+  output_file
+
+###help:
 
 Generate EPC-/Giro-QR-Code and write to image file.
 
