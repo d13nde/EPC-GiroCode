@@ -48,3 +48,20 @@ optional arguments:
   --bg_color BG_COLOR   Set background-color of image (default white)
 ```
 
+### Trivia
+I hacked this together, since I needed a standalone cli programm for generating GiroCodes for our invoices at work.  
+Since our Clients are Windows 10 and I don't wanted to use an online service for this, I searched for some Freeware to accomplish this.  
+But all I had found either was not free, did not run offline or didn't have a useable cli interface.
+
+So I made a solution with a web-api on an internal NAS-System, which produced the QR-Codes via PHP, which I am familiar with.  
+That solution worked in production, but was still not working standalone in an isolated test environment.  
+Since I'm also trying to learn some python at the moment, I made a python script to accomplish this task locally via the excellent [qrcode python module](https://pypi.org/project/qrcode/).  
+Meanwhile I also came across [argparse](https://docs.python.org/3/library/argparse.html) in python, which I find really astounding...
+
+But, since I didn't want to install python with the needed modules on each client, there had to be a way to compile this in to an exe file.  
+That's where [pyinstaller](https://www.pyinstaller.org) comes in, since it does exactly that.  
+Unfortunately, it seems that many malware coders use this same tool, so the resulting exe got flagged as malware from Windows Defender and was deleted right away!
+
+Luckily, there is a solution for nearly every problem of that kind: compile your own pyinstaller on your local windows machine. You can the free Visual Studio Comunity Edition for this.
+
+After all that, I have now a working solution, which I wanted to make public.
